@@ -1,0 +1,40 @@
+@import 'constants';
+@import 'colors';
+
+* {
+  box-sizing: border-box;
+}
+
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.5;
+  font-family: 'Work Sans', sans-serif;
+  letter-spacing: -.08em;
+}
+
+body {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding-left: $gutter;
+  list-style-type: none;
+}

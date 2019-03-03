@@ -1,0 +1,157 @@
+@import '../../styles/vars';
+
+$button-size: 40px;
+
+.button {
+  background-color: transparent;
+  -moz-backface-visibility: hidden;
+  padding: $gutter;
+  height: calc(#{$button-size} + #{$gutter-large});
+  width: calc(#{$button-size} + #{$gutter-large});
+  -webkit-appearance: none;
+  border: none;
+  position: absolute;
+  bottom: $gutter;
+  left: $gutter;
+  cursor: pointer;
+  border-radius: 100%;
+  background-color: $pink;
+  border: solid 2px $navy;
+  opacity: .5;
+
+  &:active,
+  &:focus {
+    opacity: 1;
+    border-color: $pink;
+  }
+}
+
+.button--line-1,
+.button--line-2,
+.button--line-3 {
+  display: block;
+  background-color: $color-white;
+  height: 5px;
+  width: $button-size - 4px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  opacity: 1;
+  transition: $transition;
+  transition-delay: .2s;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: calc(100% - #{$button-size} - #{$gutter-large} - #{$gutter-large});
+  display: block;
+  transition: $transition;
+  z-index: 10;
+  overflow: hidden;
+
+  &.visible {
+    margin-left: 0;
+    background-color: rgba(0, 0, 0, .7);
+
+    .button--line-1 {
+      transform: rotate(-45deg) translateY(150%) translateX(-25%);
+    }
+
+    .button--line-2 {
+      opacity: 0;
+    }
+
+    .button--line-3 {
+      transform: rotate(45deg) translateY(-200%) translateX(-28%);
+    }
+  }
+}
+
+.nav-list {
+  position: absolute;
+  display: block;
+  left: calc(#{$button-size} + #{$gutter-large} + #{$gutter-large});
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: $gutter;
+  list-style-type: none;
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+
+  li:first-child {
+    flex-grow: 1;
+  }
+}
+
+.nav-link {
+  color: $color-text;
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  border-bottom: solid 1px;
+  padding: $gutter;
+
+  &:visited {
+    color: $color-text;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $color-text;
+  }
+}
+
+@media (min-width: 700px) {
+  .button {
+    display: none;
+  }
+
+  .nav-wrapper {
+    position: relative;
+    overflow: unset;
+    margin-left: unset;
+  }
+
+  .nav-list {
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    background-color: transparent;
+
+    li {
+      flex-grow: 0;
+    }
+
+    li:first-child {
+      flex-grow: 0;
+    }
+  }
+
+  .nav-link {
+    padding: $gutter/2 $gutter;
+    color: $color-white;
+    border-bottom: none;
+    text-decoration: underline;
+
+    &:visited {
+      color: $color-white;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-white;
+      color: $color-text;
+    }
+  }
+}

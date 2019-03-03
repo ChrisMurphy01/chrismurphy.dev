@@ -1,0 +1,44 @@
+{
+  "name": "chrismurphy.me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/ChrisMurphy01/chirsmurphy.me.git",
+  "author": "Chris Murphy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisMurphy01/chirsmurphy.me/issues"
+  },
+  "homepage": "https://github.com/ChrisMurphy01/chirsmurphy.me#readme",
+  "dependencies": {
+    "assemble": "~0.3.11",
+    "autoprefixer": "^9.4.4",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "components": "^0.1.0",
+    "grunt": "~0.4.0",
+    "postcss-modules": "^1.4.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.7.0",
+    "react-router-dom": "^4.3.1",
+    "src": "^1.1.2",
+    "styles": "^0.2.1",
+    "views": "^1.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "cssnano": "^4.1.8",
+    "parcel": "^1.11.0",
+    "sass": "^1.15.3"
+  }
+}

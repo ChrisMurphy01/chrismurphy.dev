@@ -1,0 +1,42 @@
+@import '../../styles/index';
+
+.work-item {
+  width: 100%;
+  background-color: $content-bg;
+  padding: $gutter-large;
+  margin-bottom: $gutter-large;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  clip-path: $clip-path;
+}
+
+.work-item__image-wrapper {
+  max-width: 300px;
+  margin-bottom: $gutter;
+  width: 100%;
+  clip-path: $clip-path;
+  padding: 1px;
+  background-color: $grey-lightest;
+}
+
+.work-item__image {
+  display: block;
+  width: 100%;
+  clip-path: $clip-path;
+}
+
+@media (min-width: 600px) {
+  .work-item {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .work-item__image-wrapper {
+    margin-bottom: 0;
+    margin-right: $gutter;
+    width: 40%;
+    flex-shrink: 0;
+    // flex-basis: 40%;
+  }
+}

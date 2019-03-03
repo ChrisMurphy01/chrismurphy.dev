@@ -1,0 +1,9 @@
+@import '../../styles/vars';
+
+.text {
+  padding: $gutter-large;
+  background-color: $content-bg;
+  margin: auto;
+  margin-bottom: $gutter-large;
+  clip-path: $clip-path;
+}

@@ -1,0 +1,12 @@
+@import '../../styles/vars';
+
+.wrapper {
+  margin: auto;
+  width: 100%;
+  max-width: 550px;
+  padding: $gutter;
+
+  &.wide {
+    max-width: 1000px;
+  }
+}

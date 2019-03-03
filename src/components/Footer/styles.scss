@@ -1,0 +1,8 @@
+@import '../../styles/vars';
+
+.footer {
+  margin-top: $gutter-large;
+  padding: $gutter-large;
+  background-color: $color-text;
+  color: $color-white;
+}
