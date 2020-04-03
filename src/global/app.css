@@ -1,0 +1,57 @@
+/*
+  Global App CSS
+  ----------------------
+  Use this file for styles that should be applied to all components.
+  For example, "font-family" within the "body" selector is a CSS property
+  most apps will want applied to all components.
+
+  Any global CSS variables should also be applied here.
+*/
+
+:root {
+  --color-grey-darker: #333;
+  --color-text: var(--color-grey-darker);
+  /* Sizes */
+  --gutter: 2rem;
+  /* Colors */
+  --color-white: #e1e0d4;
+  --color-blue: #003F4F;
+  --color-orange: #fa6e17;
+  /* Consts */
+  --color-primary: var(--color-blue);
+  --color-secondary: var(--color-white);
+  --color-tertiary: var(--color-orange);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+  color: var(--color-text);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2.4rem;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+@media (min-width: 700px) {
+  body {
+    font-size: 2.4rem;
+  }
+}
