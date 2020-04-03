@@ -1,0 +1,154 @@
+:host {
+  display: block;
+}
+
+.header {
+  position: absolute;
+  display: flex;
+  z-index: 10;
+  gap: .25em;
+  font-weight: 400;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.nav-toggle {
+  border: none;
+  border: solid 2px var(--color-tertiary);
+  border-radius: 100%;
+  background-color: var(--color-tertiary);
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 600;
+  width: 2.5em;
+  height: 2.5em;
+  color: var(--color-secondary);
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  outline: none;
+  display: block;
+  opacity: .8;
+}
+
+.nav-toggle::-moz-focus-inner {
+  border: 0;
+}
+
+.nav-toggle:focus, .nav-toggle:active {
+  border-color: var(--color-primary);
+}
+
+.burger {
+  width: 1em;
+  height: 2px;
+  background-color: var(--color-secondary);
+  display: block;
+  margin: auto;
+  position: relative;
+  padding: 0;
+  transition: all .25s;
+}
+
+.burger::before, .burger::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background-color: var(--color-secondary);
+  left: 0;
+  transition: all .25s;
+}
+
+.burger::before {
+  top: -6px;
+}
+
+.burger::after {
+  bottom: -6px;
+}
+
+.burger.active {
+  background-color: transparent;
+}
+
+.burger.active::before {
+  top: 0;
+  transform-origin: center center;
+  transform: rotate(45deg);
+}
+
+.burger.active::after {
+  bottom: 0;
+  transform-origin: center center;
+  transform: rotate(-45deg);
+}
+
+.nav-bg {
+  border-radius: 100%;
+  background-color: var(--color-primary);
+  margin-top: 1rem;
+  margin-left: -2.5rem;
+  transition: all ease-in-out .125s;
+  font-size: 0em;
+  position: relative;
+  z-index: 0;
+  width: 8em;
+  height: 8em;
+  scale: 0;
+  overflow: hidden;
+}
+
+.nav-bg.active {
+  font-size: 1em;
+  scale: 1;
+}
+
+.nav {
+  display: block;
+  height: 100%;
+}
+
+.links-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  flex: 0 1 2em;
+}
+
+.list-item:first-child {
+  flex: 1;
+}
+
+.list-item:last-child {
+  flex: 1;
+}
+
+.list-item a {
+  align-items: center;
+  justify-content: center;
+}
+
+.list-item:first-child a {
+  align-items: flex-end;
+}
+
+.list-item:last-child a {
+  align-items: flex-start;
+}
+
+.list-item.active {
+  background-color: var(--color-tertiary);
+}

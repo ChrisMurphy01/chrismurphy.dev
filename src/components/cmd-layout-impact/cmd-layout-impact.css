@@ -1,0 +1,71 @@
+:host {
+  display: block;
+}
+
+.bg-wrapper, .content-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.content-wrapper {
+  position: absolute;
+  top: 0;
+  font-size: 5vw;
+  font-weight: 600;
+}
+
+.bg-wrapper:after {
+  content: "";
+  width: 200vw;
+  height: 200vw;
+  background-color: var(--color-tertiary);
+  position: absolute;
+  left: 5vw;
+  top: 50vh;
+  margin-top: -100vw;
+  border-radius: 100%;
+  opacity: .8;
+  overflow: hidden;
+}
+
+.bg-top, .bg-bottom, .content-top, .content-bottom {
+  height: 50vh;
+  padding-left: 10vw;
+}
+
+.bg-top {
+  background-color: var(--color-secondary);
+}
+
+.bg-bottom {
+  background-color: var(--color-primary);
+}
+
+.content-top {
+  color: var(--color-secondary);
+  display: flex;
+  align-items: flex-end;
+}
+
+.text {
+  margin: 0;
+}
+
+.content-top .text {
+  margin-bottom: .25em;
+}
+
+.content-bottom {
+  color: var(--color-primary);
+}
+
+.content-bottom .text {
+  margin-top: .25em;
+}
+
+@media (min-width: 1000px) {
+  .content-wrapper {
+    font-size: 5rem;
+  }
+}
